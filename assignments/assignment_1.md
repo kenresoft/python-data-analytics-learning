@@ -1,6 +1,6 @@
 # EXERCISE ONE: FIRST STEPS IN PYTHON
 
-* **Name:** Amadi Kennth Kachukwuside
+* **Name:** Amadi Kenneth Kachukwuside
 * **Class:** Introduction to programming. 
 * **Group:** B
 
