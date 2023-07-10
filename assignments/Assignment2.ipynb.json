@@ -1,0 +1,490 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Assignment 2- Python Basics Practice\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problem 1 - Variables and Data Types\n",
+    "\n",
+    "**Q1: Assign your name to the variable `name`.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "name = 'Amadi Kenneth Kachukwuside'"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q2: Assign your age (real or fake) to the variable `age`.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "age = 40"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q3: Assign a boolean value to the variable `has_android_phone`.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "has_android_phone = True"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "You can check the values of these variables by running the next cell."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('Amadi Kenneth Kachukwuside', 40, True)"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "name, age, has_android_phone"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q4: Create a dictionary `person` with keys `\"Name\"`, `\"Age\"`, `\"HasAndroidPhone\"` and values using the variables defined above.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "person = {\n",
+    "    \"Name\" : name,\n",
+    "    \"Age\" : age,\n",
+    "    \"HasAndroidPhone\" : has_android_phone,\n",
+    "    }"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's use the `person` dictionary to print a nice message."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Good day! \n",
+      "My name is Amadi Kenneth Kachukwuside and I am 40 years old. \n",
+      "It is absolutely True to say that I have an Android phone.\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('Good day! \\nMy name is', person[\"Name\"], 'and I am', person[\"Age\"], 'years old.', '\\nIt is absolutely', person[\"HasAndroidPhone\"], 'to say that I have an Android phone.')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problem 2 - Working with Lists\n",
+    "\n",
+    "**Q5: Create a list containing the following 3 elements:**\n",
+    "\n",
+    "* your favorite color\n",
+    "* the number of pets you have\n",
+    "* a boolean value describing whether you have previous programming experience\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list = ['purple', 0, True]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's see what the list looks like:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['purple', 0, True]"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q6: Complete the following `print`  statements by accessing the appropriate elements from `my_list`.**\n",
+    "\n",
+    "*Hint*: Use the list indexing notation `[]`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "My favorite color is purple\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('My favorite color is', my_list[0])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I have 0 pet(s).\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('I have {} pet(s).'.format(my_list[1]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q7: Add your favorite single digit number to the end of the list using the appropriate list method.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list.append(8)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's see if the number shows up in the list."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['purple', 0, True, 8]"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q8: Remove the first element of the list, using the appropriate list method.**\n",
+    "\n",
+    "*Hint*: Check out methods of list here: https://www.w3schools.com/python/python_ref_list.asp"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list.remove(0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['purple', True, 8]"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Q9: Complete the `print` statement below to display the number of elements in `my_list`.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The list has 3 elements.\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"The list has {} elements.\".format(len(my_list)))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problem 4 - Flying to the Bahamas\n",
+    "\n",
+    "**Q11: A travel company wants to fly a plane to the Bahamas. Flying the plane costs 5000 dollars. So far, 29 people have signed up for the trip. If the company charges 200 dollars per ticket, what is the profit made by the company?**\n",
+    "\n",
+    "Fill in values or arithmetic expressions for the variables below."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cost_of_flying_plane = 5000"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "number_of_passengers = 29"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "price_of_ticket = 200"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "profit = (number_of_passengers * price_of_ticket) - cost_of_flying_plane"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The company makes of a profit of 800 dollars\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('The company makes of a profit of {} dollars'.format(profit))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problem 5 - Twitter Sentiment Analysis\n",
+    "\n",
+    "Are your ready to perform some *Data Analysis with Python*? In this problem, we'll analyze some fictional tweets and find out whether the overall sentiment of Twitter users is happy or sad. This is a simplified version of an important real world problem called *sentiment analysis*.\n",
+    "\n",
+    "Before we begin, we need a list of tweets to analyze. We're picking a small number of tweets here, but the exact same analysis can also be done for thousands, or even millions of tweets. The collection of data that we perform analysis on is often called a *dataset*."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tweets = [\n",
+    "    \"Wow, what a great day today!! #sunshine\",\n",
+    "    \"I feel sad about the things going on around us. #covid19\",\n",
+    "    \"I'm really excited to learn Python with @JovianML #zerotopandas\",\n",
+    "    \"This is a really nice song. #linkinpark\",\n",
+    "    \"The python programming language is useful for data science\",\n",
+    "    \"Why do bad things happen to me?\",\n",
+    "    \"Apple announces the release of the new iPhone 12. Fans are excited.\",\n",
+    "    \"Spent my day with family!! #happy\",\n",
+    "    \"Check out my blog post on common string operations in Python. #zerotopandas\",\n",
+    "    \"Freecodecamp has great coding tutorials. #skillup\"\n",
+    "]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's begin by answering a very simple but important question about our dataset.\n",
+    "\n",
+    "**Q12: How many tweets does the dataset contain?**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "number_of_tweets = len(tweets)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The dataset contains 10 tweets.\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('The dataset contains', number_of_tweets, 'tweets.')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
